@@ -7,7 +7,7 @@ use std::panic::{self, AssertUnwindSafe, UnwindSafe};
 use context::Context;
 use context::stack::{Stack, ProtectedFixedSizeStack};
 use futures::{Async, Future, Poll};
-use futures::unsync::oneshot::{self, Receiver};
+use futures::sync::oneshot::{self, Receiver};
 
 use errors::{Dropped, StackError, TaskFailed};
 use switch::{Switch, WaitTask};

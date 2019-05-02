@@ -111,7 +111,7 @@ pub trait CoroutineStream: Stream + Sized {
     /// # extern crate corona;
     /// # extern crate futures;
     /// # use corona::prelude::*;
-    /// # use futures::unsync::mpsc;
+    /// # use futures::sync::mpsc;
     /// # fn main() {
     /// let (sender, receiver) = mpsc::unbounded();
     /// sender.unbounded_send(21);
@@ -162,7 +162,7 @@ pub trait CoroutineStream: Stream + Sized {
     /// # extern crate corona;
     /// # extern crate futures;
     /// # use corona::prelude::*;
-    /// # use futures::unsync::mpsc;
+    /// # use futures::sync::mpsc;
     /// # fn main() {
     /// let (sender, receiver) = mpsc::unbounded();
     /// sender.unbounded_send(21);
@@ -210,7 +210,7 @@ pub trait CoroutineStream: Stream + Sized {
     /// # extern crate corona;
     /// # extern crate futures;
     /// # use corona::prelude::*;
-    /// # use futures::unsync::mpsc;
+    /// # use futures::sync::mpsc;
     /// # fn main() {
     /// let (sender, mut receiver) = mpsc::unbounded();
     /// sender.unbounded_send(21);
@@ -247,7 +247,7 @@ pub trait CoroutineStream: Stream + Sized {
     /// # extern crate corona;
     /// # extern crate futures;
     /// # use corona::prelude::*;
-    /// # use futures::unsync::mpsc;
+    /// # use futures::sync::mpsc;
     /// # fn main() {
     /// let (sender, mut receiver) = mpsc::unbounded();
     /// sender.unbounded_send(21);
@@ -316,7 +316,7 @@ pub trait CoroutineSink: Sink + Sized {
     /// # extern crate corona;
     /// # extern crate futures;
     /// # use corona::prelude::*;
-    /// # use futures::unsync::mpsc;
+    /// # use futures::sync::mpsc;
     /// # fn main() {
     /// let (mut sender, mut receiver) = mpsc::channel(1);
     /// let result = Coroutine::new().run(move || {

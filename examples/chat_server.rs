@@ -33,7 +33,7 @@ use corona::io::BlockingWrapper;
 use corona::prelude::*;
 use corona::wrappers::SinkSender;
 use futures::{future, Future};
-use futures::unsync::mpsc::{self, Sender, Receiver};
+use futures::sync::mpsc::{self, Sender, Receiver};
 use tokio::net::{TcpListener, TcpStream};
 use tokio::io::{AsyncRead, WriteHalf};
 use tokio::codec::{Encoder, FramedWrite};
